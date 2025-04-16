@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 13px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header {
+    font-family: "Fjalla One", sans-serif;
+}
+.menu-block ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+.menu-block ul a {
+    color: #656d78;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 13px;
+    padding: 25px;
+    line-height: 20px;
+}
+.menu-block ul a:hover {
+    color: #50c1e9;
+}
+.head-image-block {
+    background-repeat: no-repeat;
+    height: 500px;
+    background-size: cover;
+}
+#head {
+    position: relative;
+}
+.caption-title-block {
+    position: absolute;
+    left: 38%;
+    right: 38%;
+    top: 40%;
+    text-align: center;
+}
+.caption-title-block h5 {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 28px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 3px;
+}
+footer {
+    color: #ffffff;
+    background-color: #434a54;
+    min-height: 80px;
+}
+footer .row {
+    padding-top: calc(100%-53px);
+}
+footer p {
+    font-family: "Roboto Slab", serif;
+}
+footer p i {
+    color: #fb6e52;
+    padding: 0 5px;
+}
+footer ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+   
+}
+footer ul li {
+    cursor: pointer;
+    position: relative;
+}
+footer ul span {
+    display: none;
+    position: absolute;
+    bottom: 25px;
+    right: -20px;
+    background-color: #50c1e9;
+    width: 60px;
+    padding: 4px 0;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 12px;
+}
+footer ul span:after {
+    content: '';
+    border-top: 3px solid #50c1e9;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -4px;
+    width: 0;
+    height: 0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+
+}
+footer ul li:hover span {
+    display: inline;
+}
