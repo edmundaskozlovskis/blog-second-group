@@ -1,3 +1,10 @@
+:root {
+    --link: #50c1e9;
+    --time: #aab2bd;
+    --box-backgroud: #ffffff;
+    --text-dark-backgroud: #ffffff;
+}
+
 body {
     margin: 0;
 }
@@ -29,7 +36,7 @@ header {
     line-height: 20px;
 }
 .menu-block ul a:hover {
-    color: #50c1e9;
+    color: var(--link);
 }
 .head-image-block {
     background-repeat: no-repeat;
@@ -47,20 +54,150 @@ header {
     text-align: center;
 }
 .caption-title-block h5 {
-    color: #ffffff;
+    color: var(--text-dark-backgroud);
     background-color: rgba(0, 0, 0, 0.4);
     font-size: 28px;
     text-transform: uppercase;
     padding: 10px;
     border-radius: 3px;
 }
+
+/* header block end */
+
+/* homepage slider block */
+
+.mySlides {display:none;}
+.w3-content {
+    margin: 70px 0;
+}
+.mySlides .text-block {
+    width: 50%;
+    border: 1px solid #e6e9ee;
+    background-color: var(--box-backgroud);
+    padding: 20px 20px 2px 20px;
+    box-sizing: border-box;
+}
+.slider-img-block img {
+    display: block;
+}.mySlides .text-block .time {
+    color: #aab2bd;
+    font: 12px / 22px 'Roboto Slab', sans-serif;
+    margin: 0;
+}
+.mySlides .text-block h5 {
+    margin: 5px 0 13px;
+    font: 16px 'Fjalla One', sans-serif;
+    transition: 0.25s;
+    font-weight: 400;
+}
+.mySlides .text-block h5 a {
+    color: #434a54;
+    text-decoration: none;
+}
+.mySlides .text-block h5 a:hover {
+    color: var(--link);
+}
+.mySlides .text-block p {
+    color: #656d78;
+    font: 12px/22px 'Roboto Slab', sans-serif;
+    margin: 0;
+}
+.mySlides .text-block hr {
+    border: none;
+    border-top: solid 1px #e6e9ee;
+    margin-top: calc(394px - 24px - 40px - 70px - 198px);
+}
+.mySlides .text-block ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+}
+.list-inline-share-like > li:first-child a {
+    color: #949ba6;
+    font: 12px 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    background-color: #f6f7fb;
+    text-decoration: none;
+    transition: 0.25s;
+    border: 1px solid transparent;
+}
+.list-inline-share-like > li:first-child a:hover {
+    color: var(--link);
+    border: solid 1px var(--link);
+}
+.list-inline-share-like .pull-right {
+    font-size: 12px;
+}
+.list-inline-share-like .pull-right a {
+    color: #949ba6;
+    text-decoration: none;
+    transition: 0.25s;
+}
+.list-inline-share-like .pull-right a:hover {
+    color: var(--link);
+}
+.list-inline-share-like .pull-right span {
+    display: none;
+    position: absolute;
+    bottom: 22px;
+    right: -4px;
+    color: var(--text-dark-backgroud);
+    background-color: #fb6e52;
+    padding: 4px;
+    border-radius: 3px;
+    text-align: center;
+    font: 12px 'Fjalla One', sans-serif;
+}
+.list-inline-share-like .pull-right span::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -4px;
+    width: 0;
+    height: 0;
+    border-top: 3px solid #fb6e52;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.list-inline-share-like .pull-right li:last-child a:hover {
+    color: #fb6e52;
+}
+.list-inline-share-like .pull-right li:last-child a:hover span {
+    display: inline;
+}
+.list-inline-share-like .pull-right li:last-child a {
+    position: relative;
+}
+/* homepage slider block end */
+
+/* Homepage */
+
+.homepage-posts img {
+    width: 100%;
+}
+.homepage-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 70px;
+}
+
+/* Homepage end */
+
+/* footer block */
+
 footer {
-    color: #ffffff;
+    color: var(--text-dark-backgroud);
     background-color: #434a54;
     min-height: 80px;
 }
 footer .row {
-    padding-top: calc(100%-53px);
+    padding-top: calc((80px - 53px) / 2);
 }
 footer p {
     font-family: "Roboto Slab", serif;
@@ -85,17 +222,17 @@ footer ul span {
     position: absolute;
     bottom: 25px;
     right: -20px;
-    background-color: #50c1e9;
+    background-color: var(--link);
     width: 60px;
     padding: 4px 0;
-    color: #ffffff;
+    color: var(--text-dark-backgroud);
     text-align: center;
     font-family: "Fjalla One", sans-serif;
     font-size: 12px;
 }
 footer ul span:after {
     content: '';
-    border-top: 3px solid #50c1e9;
+    border-top: 3px solid var(--link);
     position: absolute;
     top: 100%;
     left: 50%;
