@@ -42,5 +42,5 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "flex";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  //setTimeout(carousel, 2000); // Change image every 2 seconds
 }
