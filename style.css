@@ -21,15 +21,18 @@ body {
 }
 .row-columns {
     display: flex;
+    margin: 70px 0;
 }
 .mySlides .text-block .time,
-.homepage-posts .time {
+.homepage-posts .time,
+.single-post .time {
     color: #aab2bd;
     font: 12px / 22px 'Roboto Slab', sans-serif;
     margin: 0;
 }
 .mySlides .text-block h5,
-.homepage-posts h5 {
+.homepage-posts h5,
+.single-post article h5 {
     margin: 5px 0 13px;
     font: 16px 'Fjalla One', sans-serif;
     transition: 0.25s;
@@ -45,13 +48,15 @@ body {
     color: var(--link);
 }
 .mySlides .text-block p,
-.homepage-posts p {
+.homepage-posts p,
+.single-post p {
     color: #656d78;
     font: 12px/22px 'Roboto Slab', sans-serif;
     margin: 0;
 }
 .mySlides .text-block hr,
-.homepage-posts hr {
+.homepage-posts hr,
+.single-post hr {
     border: none;
     border-top: solid 1px #e6e9ee;
 }
@@ -98,7 +103,9 @@ body {
     position: relative;
 }
 .mySlides .text-block ul,
-.homepage-posts ul {
+.homepage-posts ul,
+.single-post .content-inline-share-like,
+.single-post .content-inline-share-like ul {
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -107,7 +114,8 @@ body {
     align-items: center;
 }
 .list-inline-share-like > li:first-child a,
-.homepage-posts ul li a {
+.homepage-posts ul li a,
+.single-post article .content-inline-share-like a {
     color: #949ba6;
     font: 12px 'Fjalla One', sans-serif;
     text-transform: uppercase;
@@ -119,7 +127,8 @@ body {
     font-size: 12px;
 }
 .mySlides .text-block,
-.homepage-posts .content {
+.homepage-posts .content,
+.single-post .content {
     border: 1px solid #e6e9ee;
     background-color: var(--box-backgroud);
     padding: 20px 20px 2px 20px;
@@ -263,6 +272,31 @@ header {
 
 .single-post .row-columns aside {
     width: 25%;
+}
+
+.single-post article img {
+    width: 100%;
+    display: block;
+}
+.single-post article .text {
+    padding: 23px 50px 2px 50px;
+}
+.single-post article h5 {
+    color: #434a54;
+}
+.single-post .list-inline-photos {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.single-post article .content-inline-share-like i {
+    color: #949ba6;
+    font-size: 12px;
+}
+.single-post article .content-inline-share-like a {
+    text-transform: lowercase;
 }
  
 /* Single post end */
