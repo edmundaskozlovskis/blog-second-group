@@ -61,11 +61,15 @@ body {
     border-top: solid 1px #e6e9ee;
 }
 .list-inline-share-like .pull-right a:hover,
-.homepage-posts ul li a:hover {
+.homepage-posts ul li a:hover,
+.single-post article .content-inline-share-like a:hover,
+.single-post .comment-text a:hover {
     color: var(--link);
 }
 .list-inline-share-like .pull-right span,
-.homepage-posts .pull-right span {
+.homepage-posts .pull-right span,
+.single-post .pull-right span,
+.single-post .comment-text span {
     display: none;
     position: absolute;
     bottom: 22px;
@@ -78,7 +82,9 @@ body {
     font: 12px 'Fjalla One', sans-serif;
 }
 .list-inline-share-like .pull-right span::after,
-.homepage-posts .pull-right span::after {
+.homepage-posts .pull-right span::after,
+.single-post .pull-right span::after,
+.single-post .comment-text span::after {
     content: '';
     position: absolute;
     top: 100%;
@@ -91,15 +97,21 @@ body {
     border-left: 4px solid transparent;
 }
 .list-inline-share-like .pull-right li:last-child a:hover,
-.homepage-posts .pull-right li:last-child a:hover {
+.homepage-posts .pull-right li:last-child a:hover,
+.single-post .pull-right li:last-child a:hover,
+.single-post .comment-text li:last-child a:hover {
     color: #fb6e52;
 }
 .list-inline-share-like .pull-right li:last-child a:hover span,
-.homepage-posts .pull-right li:last-child a:hover span {
+.homepage-posts .pull-right li:last-child a:hover span,
+.single-post .pull-right li:last-child a:hover span,
+.single-post .comment-text li:last-child a:hover span {
     display: inline;
 }
 .list-inline-share-like .pull-right li:last-child a,
-.homepage-posts .pull-right li:last-child a {
+.homepage-posts .pull-right li:last-child a,
+.single-post .pull-right li:last-child a,
+.single-post .comment-text li:last-child a {
     position: relative;
 }
 .mySlides .text-block ul,
@@ -115,7 +127,8 @@ body {
 }
 .list-inline-share-like > li:first-child a,
 .homepage-posts ul li a,
-.single-post article .content-inline-share-like a {
+.single-post article .content-inline-share-like a,
+.single-post .comment-text a {
     color: #949ba6;
     font: 12px 'Fjalla One', sans-serif;
     text-transform: uppercase;
@@ -291,12 +304,46 @@ header {
     gap: 14px;
     flex-wrap: wrap;
 }
-.single-post article .content-inline-share-like i {
+.single-post article .content-inline-share-like h3 i {
     color: #949ba6;
     font-size: 12px;
 }
 .single-post article .content-inline-share-like a {
     text-transform: lowercase;
+}
+.single-post .comment {
+    display: flex;
+    gap: 30px;
+}
+.single-post h4 {
+    margin: 3px 0 11px;
+}
+.single-post h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #656d78;
+    margin: 90px 0 16px;
+}
+.single-post .comment img {
+    border-radius: 3px;
+}
+.single-post .comment .comment-text {
+    padding: 3px 0 12px;
+}
+.single-post .comment-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 3px 0 0;
+    float: right;
+}
+.single-post .comment-text ul li {
+    float: left;
+}
+.single-post .comment-text ul li:first-child {
+    padding-right: 12px;
+}
+.single-post .replay {
+    margin: 30px 0 30px 130px;
 }
  
 /* Single post end */
