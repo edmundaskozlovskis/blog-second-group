@@ -22,6 +22,7 @@ body {
 .row-columns {
     display: flex;
     margin: 70px 0;
+    gap: 30px;
 }
 .mySlides .text-block .time,
 .homepage-posts .time,
@@ -345,8 +346,144 @@ header {
 .single-post .replay {
     margin: 30px 0 30px 130px;
 }
- 
+.single-post .leave-comment input[type='file'] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.single-post .leave-comment .photo {
+    width: 70px;
+    height: 70px;
+    color: #ccd0d9;
+    border: 1px dashed #ccd0d9;
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+.single-post .leave-comment .photo:hover {
+    color: #aab2bd;
+    border-color: #aab2bd;
+}
+.single-post .leave-comment form .comment {
+    display: flex;
+    gap: 30px;
+}
+.single-post .leave-comment .content {
+    width: 100%;
+}
+.single-post .leave-comment .content input {
+    margin: 4px 0 20px;
+    padding: 0 20px;
+    height: 30px;
+    border: 1px dashed #ccd0d9;
+    color: #ccd0d9;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.single-post .leave-comment .content input:focus {
+    color: #434a54;
+}
+.single-post .leave-comment .content textarea {
+    padding: 7px 20px;
+    border: 1px dashed #ccd0d9;
+    color: #ccd0d9;
+    border-radius: 3px;
+    transition: 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100px;
+    resize: none;
+    margin-bottom: 18px;
+}
+.single-post .leave-comment .content textarea:focus {
+    color: #434a54;
+}
+.single-post .leave-comment button {
+    float: right;
+    margin-top: 20px;
+    border: 1px solid var(--link);
+    background-color: transparent;
+    color: var(--link);
+    text-transform: uppercase;
+    font: 12px / 2.5em 'Fjalla One', sans-serif;
+    border-radius: 3px;
+    height: 30px;
+    padding: 0 38px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.single-post .leave-comment button:hover {
+    color: var(--text-dark-backgroud);
+    background-color: var(--link);
+}
 /* Single post end */
+
+/* Aside start */
+
+aside ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+aside button {
+    width: 50px;
+    height: 30px;
+    background-color: var(--link);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid var(--link);
+    color: var(--text-dark-backgroud);
+    cursor: pointer;
+    transition: 0.3s;
+}
+aside button:hover {
+    background-color: #434a54;
+    border-color: #434a54;
+}
+aside input {
+    margin-right: -5px;
+    height: 30px;
+    width: calc( 100% - 50px );
+    padding: 0 20px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+aside > li {
+    margin-bottom: 30px;
+}
+aside h1 {
+    padding: 0 30px;
+    margin: 0;
+    background-color: #656d78;
+    font: 16px 'Fjalla One', sans-serif;
+    line-height: 3.3em;
+    color: var(--text-dark-backgroud);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-transform: uppercase;
+}
+aside .content a {
+    text-decoration: none;
+    color: #656d78;
+    font: 12px "Roboto Slab", serif;
+    margin-bottom: 4px;
+    display: block;
+}
+aside .content span {
+    float: right;
+    background-color: #e6e9ee;
+    min-width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    padding: 0 6px;
+    box-sizing: border-box;
+}
+
+/* Aside end */
 
 /* footer block */
 
