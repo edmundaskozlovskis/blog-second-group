@@ -50,7 +50,8 @@ body {
 }
 .mySlides .text-block p,
 .homepage-posts p,
-.single-post p {
+.single-post p,
+.about-page .text p {
     color: #656d78;
     font: 12px/22px 'Roboto Slab', sans-serif;
     margin: 0;
@@ -64,7 +65,8 @@ body {
 .list-inline-share-like .pull-right a:hover,
 .homepage-posts ul li a:hover,
 .single-post article .content-inline-share-like a:hover,
-.single-post .comment-text a:hover {
+.single-post .comment-text a:hover,
+aside .content a:hover {
     color: var(--link);
 }
 .list-inline-share-like .pull-right span,
@@ -142,7 +144,8 @@ body {
 }
 .mySlides .text-block,
 .homepage-posts .content,
-.single-post .content {
+.single-post .content,
+.about-page .content {
     border: 1px solid #e6e9ee;
     background-color: var(--box-backgroud);
     padding: 20px 20px 2px 20px;
@@ -288,7 +291,8 @@ header {
     width: 25%;
 }
 
-.single-post article img {
+.single-post article img,
+.about-page img {
     width: 100%;
     display: block;
 }
@@ -303,7 +307,7 @@ header {
     padding: 0;
     display: flex;
     gap: 14px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .single-post article .content-inline-share-like h3 i {
     color: #949ba6;
@@ -319,7 +323,8 @@ header {
 .single-post h4 {
     margin: 3px 0 11px;
 }
-.single-post h5 {
+.single-post .comment-list h5,
+.single-post .leave-comment h5 {
     font-size: 18px;
     text-transform: uppercase;
     color: #656d78;
@@ -421,6 +426,56 @@ header {
 }
 /* Single post end */
 
+/* About page */
+.about-page section .text {
+    padding: 3px 30px 8px;
+}
+.about-page .content h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #656d78;
+    margin: 0 0 20px;
+}
+.about-page .progress-base-bar {
+    height: 30px;
+    background-color: #eeeff1;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.about-page .progress-base-bar p {
+    display: inline-block;
+    margin: 0;
+    line-height: 30px;
+    padding: 0 20px;
+    color: var(--text-dark-backgroud);
+}
+.about-page .progress-base-bar p:last-child {
+    float: right;
+}
+.about-page .progress-bar {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.about-page .progress-base-bar .color-1 {
+    background-color: #50c1e9;
+}
+.about-page .progress-base-bar .color-2 {
+    background-color: #5d9cec;
+}
+.about-page .progress-base-bar .color-3 {
+    background-color: #48cfae;
+}
+
+/* About page end */
+
+/* Contact page */
+
+.contect-page iframe {
+    width: 100%;
+}
+
+/* Contact page end */
+
 /* Aside start */
 
 aside ul {
@@ -450,9 +505,13 @@ aside input {
     padding: 0 20px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    border: 1px solid #e6e9ee;
 }
-aside > li {
+aside ul li {
     margin-bottom: 30px;
+}
+aside ul ul li {
+    margin-bottom: 0;
 }
 aside h1 {
     padding: 0 30px;
@@ -469,8 +528,11 @@ aside .content a {
     text-decoration: none;
     color: #656d78;
     font: 12px "Roboto Slab", serif;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     display: block;
+}
+aside .text {
+    padding: 0 10px 18px;
 }
 aside .content span {
     float: right;
@@ -481,8 +543,45 @@ aside .content span {
     line-height: 18px;
     padding: 0 6px;
     box-sizing: border-box;
+    transition: 0.3s;
 }
-
+aside .content span:hover,
+aside .content a:hover span {
+    color: var(--text-dark-backgroud);
+    background-color: var(--link);
+}
+aside .popular-posts li {
+    padding-bottom: 10px;
+}
+aside .popular-posts .content a {
+    margin-bottom: 6px;
+}
+aside .latest-posts li {
+    display: flex;
+    gap: 15px;
+}
+aside .latest-posts i {
+    padding-top: 5px;
+    color: var(--link);
+}
+aside .popular-tags .font-14 a {
+    font-size: 14px;
+}
+aside .popular-tags .font-16 a {
+    font-size: 16px;
+}
+aside .popular-tags .font-18 a {
+    font-size: 18px;
+}
+aside .popular-tags p {
+    display: inline-block;
+}
+aside .popular-tags .text {
+    text-align: center;
+}
+aside .popular-tags .text a {
+    margin-bottom: 2px;
+}
 /* Aside end */
 
 /* footer block */
