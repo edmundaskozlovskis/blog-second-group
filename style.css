@@ -51,7 +51,8 @@ body {
 .mySlides .text-block p,
 .homepage-posts p,
 .single-post p,
-.about-page .text p {
+.about-page .text p,
+.contact-page .text p {
     color: #656d78;
     font: 12px/22px 'Roboto Slab', sans-serif;
     margin: 0;
@@ -145,7 +146,8 @@ aside .content a:hover {
 .mySlides .text-block,
 .homepage-posts .content,
 .single-post .content,
-.about-page .content {
+.about-page .content,
+.contact-page .content {
     border: 1px solid #e6e9ee;
     background-color: var(--box-backgroud);
     padding: 20px 20px 2px 20px;
@@ -379,7 +381,8 @@ header {
 .single-post .leave-comment .content {
     width: 100%;
 }
-.single-post .leave-comment .content input {
+.single-post .leave-comment .content input,
+.contact-page main form input {
     margin: 4px 0 20px;
     padding: 0 20px;
     height: 30px;
@@ -391,7 +394,8 @@ header {
 .single-post .leave-comment .content input:focus {
     color: #434a54;
 }
-.single-post .leave-comment .content textarea {
+.single-post .leave-comment .content textarea,
+.contact-page main form textarea {
     padding: 7px 20px;
     border: 1px dashed #ccd0d9;
     color: #ccd0d9;
@@ -406,7 +410,8 @@ header {
 .single-post .leave-comment .content textarea:focus {
     color: #434a54;
 }
-.single-post .leave-comment button {
+.single-post .leave-comment button,
+.contact-page main form button {
     float: right;
     margin-top: 20px;
     border: 1px solid var(--link);
@@ -420,14 +425,16 @@ header {
     cursor: pointer;
     transition: 0.3s;
 }
-.single-post .leave-comment button:hover {
+.single-post .leave-comment button:hover,
+.contact-page main form button:hover {
     color: var(--text-dark-backgroud);
     background-color: var(--link);
 }
 /* Single post end */
 
 /* About page */
-.about-page section .text {
+.about-page section .text,
+.contact-page section .text {
     padding: 3px 30px 8px;
 }
 .about-page .content h5 {
@@ -470,8 +477,34 @@ header {
 
 /* Contact page */
 
-.contect-page iframe {
+.contact-page iframe {
     width: 100%;
+    display: block;
+}
+.contact-page main h5 {
+    color: #434a54;
+    font: 16px 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+.contact-page main form div {
+    display: flex;
+    gap: 30px;
+}
+.contact-page main form input {
+    width: 100%;
+    border-style: solid;
+}
+.contact-page main form textarea {
+    width: 100%;
+    min-height: 200px;
+    box-sizing: border-box;
+    border-style: solid;
+    margin-bottom: 0;
+}
+.contact-page main form button {
+    float: none;
+    margin-bottom: 10px;
 }
 
 /* Contact page end */
@@ -640,4 +673,91 @@ footer ul span:after {
 }
 footer ul li:hover span {
     display: inline;
+}
+
+@media only screen and (max-width: 760px) {
+    .caption-title-block {
+        left: 15%;
+        right: 15%;
+        top: 35%;
+    }
+    .mySlides {
+        flex-direction: column-reverse;
+    }
+    .mySlides .text-block,
+    .single-post .row-columns main,
+    .single-post .row-columns aside {
+        width: 100%;
+    }
+    .homepage-posts {
+        grid-template-columns: 1fr;
+    }
+    footer .row,
+    .row-columns {
+        flex-direction: column;
+    }
+    .single-post article .text,
+    .about-page section .text,
+    .contact-page section .text  {
+        padding: 23px 0px 2px 0px;
+    }
+    .single-post .list-inline-photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .single-post .comment,
+    .single-post .leave-comment form .comment {
+        display: block;
+        position: relative;
+    }
+    .single-post .comment img {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .single-post .comment .comment-text {
+        padding-bottom: 72px;
+    }
+    .single-post .comment-list .time {
+        position: absolute;
+        bottom: 40px;
+        left: 70px;
+    }
+    .single-post .comment-text ul {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+    .single-post h4 {
+        position: absolute;
+        bottom: 10px;
+        left: 70px;
+    }
+    .single-post .replay {
+        margin-left: 40px;
+    }
+    .single-post .leave-comment .photo {
+        position: absolute;
+        right: 20px;
+        top: 47px;
+        height: 30px;
+        line-height: 30px;
+        background-color: var(--link);
+        border: 1px solid var(--link);
+    }
+    .single-post .leave-comment .content {
+        width: auto;
+    }
+    .single-post .leave-comment .content input {
+        width: 60%;
+    }
+    .contact-page main form div {
+        flex-direction: column;
+        gap: 0;
+    }
+    .contact-page main form div input {
+        box-sizing: border-box;
+    }
 }
